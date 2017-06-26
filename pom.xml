@@ -35,10 +35,9 @@
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
 
         <!-- SPRING -->
-        <org.springframework.boot.spring-boot-starter.version>1.5.3.RELEASE</org.springframework.boot.spring-boot-starter.version>
-        <org.springframework.boot.spring-boot-starter-data-jpa.version>1.5.3.RELEASE</org.springframework.boot.spring-boot-starter-data-jpa.version>
+        <org.springframework.spring.version>4.3.9.RELEASE</org.springframework.spring.version>
+        <org.springframework.boot.spring-boot-starter.version>1.5.4.RELEASE</org.springframework.boot.spring-boot-starter.version>
         <org.springframework.data.spring-data-mongodb.version>1.10.4.RELEASE</org.springframework.data.spring-data-mongodb.version>
-        <org.springframework.spring-test.version>4.3.9.RELEASE</org.springframework.spring-test.version>
 
         <!-- DB Drivers-->
         <org.mongodb.mongo-java-driver.version>2.12.3</org.mongodb.mongo-java-driver.version>
@@ -66,6 +65,24 @@
             <!-- Spring & persistence -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${org.springframework.boot.spring-boot-starter.version}</version>
             </dependency>
@@ -73,7 +90,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
-                <version>${org.springframework.boot.spring-boot-starter-data-jpa.version}</version>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
             </dependency>
 
             <dependency>
@@ -144,7 +161,7 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <scope>test</scope>
-                <version>${org.springframework.spring-test.version}</version>
+                <version>${org.springframework.spring.version}</version>
             </dependency>
 
             <dependency>

@@ -31,14 +31,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- maven -->
-        <org.apache.maven.plugins.maven-compiler-plugin.version>3.6.1</org.apache.maven.plugins.maven-compiler-plugin.version>
+        <org.apache.maven.plugins.maven-compiler-plugin.version>3.6.1
+        </org.apache.maven.plugins.maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+
 
         <!-- SPRING -->
-        <org.springframework.boot.spring-boot-starter.version>1.5.3.RELEASE</org.springframework.boot.spring-boot-starter.version>
-        <org.springframework.boot.spring-boot-starter-data-jpa.version>1.5.3.RELEASE</org.springframework.boot.spring-boot-starter-data-jpa.version>
-        <org.springframework.data.spring-data-mongodb.version>1.10.4.RELEASE</org.springframework.data.spring-data-mongodb.version>
+        <org.springframework.boot.spring-boot-starter.version>1.5.3.RELEASE
+        </org.springframework.boot.spring-boot-starter.version>
+        <org.springframework.boot.spring-boot-starter-data-jpa.version>1.5.3.RELEASE
+        </org.springframework.boot.spring-boot-starter-data-jpa.version>
+        <org.springframework.data.spring-data-mongodb.version>1.10.4.RELEASE
+        </org.springframework.data.spring-data-mongodb.version>
         <org.springframework.spring-test.version>4.3.9.RELEASE</org.springframework.spring-test.version>
+        <spring-hateoas.version>0.23.0.RELEASE</spring-hateoas.version>
 
         <!-- DB Drivers-->
         <org.mongodb.mongo-java-driver.version>2.12.3</org.mongodb.mongo-java-driver.version>
@@ -77,6 +84,24 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${org.springframework.boot.spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-commons</artifactId>
             </dependency>
@@ -85,6 +110,12 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-mongodb</artifactId>
                 <version>${org.springframework.data.spring-data-mongodb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.hateoas</groupId>
+                <artifactId>spring-hateoas</artifactId>
+                <version>${spring-hateoas.version}</version>
             </dependency>
 
             <!-- utils -->
@@ -180,6 +211,12 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>${maven-war-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
                 </plugin>
 
             </plugins>

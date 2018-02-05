@@ -35,7 +35,8 @@
         </org.apache.maven.plugins.maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
-
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-scm-plugin.version>1.9.5</maven-scm-plugin.version>
 
         <!-- SPRING -->
         <org.springframework.boot.spring-boot-starter.version>1.5.3.RELEASE
@@ -221,5 +222,29 @@
 
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!-- Maven release  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>${maven-scm-plugin.version}</version>
+                <configuration>
+                    <connectionType>connection</connectionType>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+
+    <scm>
+        <url>https://github.com/tvcstseng/ttstudios-common.git</url>
+        <connection>scm:git:scm:git:https://tvcstseng@github.com/ttstudios-common.git</connection>
+        <developerConnection>scm:git:scm:git:https://tvcstseng@github.com/ttstudios-common.git</developerConnection>
+    </scm>
 </project>

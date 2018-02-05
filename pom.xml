@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -242,8 +243,7 @@
 
     <scm>
         <url>https://github.com/tvcstseng/ttstudios-common.git</url>
-        <connection>scm:git:scm:git:https://tvcstseng@github.com/ttstudios-common.git</connection>
-        <developerConnection>scm:git:scm:git:https://tvcstseng@github.com/ttstudios-common.git</developerConnection>
-      <tag>ttstudios-baseline-0.0.1</tag>
-  </scm>
+        <connection>scm:git:https://github.com/tvcstseng/ttstudios-common.git</connection>
+        <developerConnection>scm:git:https://github.com/tvcstseng/ttstudios-common.git</developerConnection>
+    </scm>
 </project>
